@@ -2,6 +2,10 @@ class Vehicle {
 	int passengers;
 	int fuelcap;
 	int mpg;
+
+	int range() {
+		return fuelcap * mpg;
+	}
 }
 
 class VehicleDemo {
@@ -14,6 +18,6 @@ class VehicleDemo {
 		minivan.mpg = 21;
 
 		range = minivan.fuelcap * minivan.mpg;
-		System.out.println("Minivan can carry " + minivan.passengers + " with a range of " + range);
+		System.out.println("Minivan can carry " + minivan.passengers + " with a range of " + minivan.range() + " miles.");
 	}
 }
